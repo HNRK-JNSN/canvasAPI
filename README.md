@@ -19,11 +19,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create an access token in Canvas (**Account** → **Settings** → **Approved Integrations** → **+ New Access Token**) and export it:
+Create an access token in Canvas (**Account** → **Settings** → **Approved Integrations** → **+ New Access Token**) and provide it as `CANVAS_TOKEN` in one of two ways.
+
+**Option 1: `.env` file** (git-ignored). Edit `.env` in the project folder:
+
+```
+CANVAS_TOKEN=your_canvas_api_access_token_here
+```
+
+**Option 2: environment variable**:
 
 ```bash
 export CANVAS_TOKEN="your_canvas_api_access_token_here"
 ```
+
+If both are set, the environment variable wins over `.env`. For a single run: `CANVAS_TOKEN=other_token python app.py`.
 
 ## Usage
 

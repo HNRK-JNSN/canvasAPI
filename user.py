@@ -1,5 +1,8 @@
 import os
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()  # .env fills in values; real environment variables take precedence
 
 # ==== CONFIGURATION ====
 API_URL = "https://eaaa.instructure.com/api/v1"
